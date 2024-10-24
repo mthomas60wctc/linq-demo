@@ -134,6 +134,7 @@ Console.WriteLine(characters.Count(c => c.Alias.Count() == 0));
 // [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
 foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Series})) Console.WriteLine($"{obj.Name} - {String.Join(", ", obj.Series.ToArray())}");
 // [1.21d] Are there any character(s) with no alias (Mario series)?
+Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")));
 // [1.21e] How many character(s) with no alias (Mario series)?
 // [1.21f] List the character(s) with no alias (Mario series) - return character name and alias only.
 // [1.21g] Are there any character(s) with no alias (Donkey Kong series)?
