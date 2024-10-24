@@ -142,6 +142,7 @@ foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Conta
 // [1.21g] Are there any character(s) with no alias (Donkey Kong series)?
 Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
 // [1.21h] How many character(s) with no alias (Donkey Kong series)?
+Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
 // [1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
 // [1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
 // [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
