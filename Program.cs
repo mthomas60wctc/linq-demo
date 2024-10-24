@@ -126,6 +126,7 @@ Console.WriteLine("\x1b[3J");
 // [1.20a] How many character(s) made their first appearance in Donkey Kong 64?
 Console.WriteLine(characters.Count(c => c.FirstAppearance == "Donkey Kong 64"));
 // [1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
+foreach(string n in characters.Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name)) Console.WriteLine(n);
 // [1.21a] Are there any character(s) with no alias (all series)?
 // [1.21b] How many character(s) with no alias (all series)?
 // [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
