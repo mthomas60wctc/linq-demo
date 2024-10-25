@@ -145,11 +145,12 @@ Console.WriteLine("\x1b[3J");
 // Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
 // // [1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
 // foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")).Select(c => c.Name)) Console.WriteLine(n); //did not include alias because list will be empty
-// [1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
-Console.WriteLine(characters.Any(c => c.Alias.Contains("Snowmad King")));
-// [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
-foreach (var obj in characters.Where(c => c.Alias.Contains("Snowmad King")).Select(c => new { c.Name, c.Alias })) Console.WriteLine($"{obj.Name} AKA {String.Join(", ", obj.Alias.ToArray())}");
+// // [1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
+// Console.WriteLine(characters.Any(c => c.Alias.Contains("Snowmad King")));
+// // [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
+// foreach (var obj in characters.Where(c => c.Alias.Contains("Snowmad King")).Select(c => new { c.Name, c.Alias })) Console.WriteLine($"{obj.Name} AKA {String.Join(", ", obj.Alias.ToArray())}");
 // [1.23a] Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
+Console.WriteLine(characters.Any(c => c.Alias.Contains("Winter Kong")));
 // [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
 // [1.24a] How many character(s) have a species of Kremling?
 // [1.24b] List the character(s) that have a species of Kremling - return character name only.
