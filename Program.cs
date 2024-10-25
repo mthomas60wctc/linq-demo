@@ -152,6 +152,7 @@ Console.WriteLine("\x1b[3J");
 // [1.23a] Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
 Console.WriteLine(characters.Any(c => c.Alias.Contains("Winter Kong")));
 // [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
+foreach (var obj in characters.Where(c => c.Alias.Contains("Winter Kong")).Select(c => new { c.Name, c.Alias })) Console.WriteLine($"{obj.Name} AKA {String.Join(", ", obj.Alias.ToArray())}");
 // [1.24a] How many character(s) have a species of Kremling?
 // [1.24b] List the character(s) that have a species of Kremling - return character name only.
 // [1.25a] How many character(s) in the Mario series are Human species?
