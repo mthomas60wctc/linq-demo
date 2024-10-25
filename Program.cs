@@ -161,10 +161,11 @@ Console.WriteLine("\x1b[3J");
 // Console.WriteLine(characters.Count(c => c.Species == "Human" && c.Series.Contains("Mario")));
 // // [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
 // foreach (string? n in characters.Where(c => c.Species == "Human" && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n ?? "");
-// [1.25c] How many character(s) in the Mario series are Koopa species?
-Console.WriteLine(characters.Count(c => c.Species == "Koopa" && c.Series.Contains("Mario")));
-// [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
-foreach (string? n in characters.Where(c => c.Species == "Koopa" && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n ?? "");
+// // [1.25c] How many character(s) in the Mario series are Koopa species?
+// Console.WriteLine(characters.Count(c => c.Species == "Koopa" && c.Series.Contains("Mario")));
+// // [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
+// foreach (string? n in characters.Where(c => c.Species == "Koopa" && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n ?? "");
 // [1.25e] How many character(s) in the Mario series are something other than Human or Koopa species?
+Console.WriteLine(characters.Count(c => !(c.Species == "Koopa" || c.Species == "Human") && c.Series.Contains("Mario")));
 // [1.25f] List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
 // [1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
