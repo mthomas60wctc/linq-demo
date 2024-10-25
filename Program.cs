@@ -160,6 +160,7 @@ Console.WriteLine("\x1b[3J");
 // [1.25a] How many character(s) in the Mario series are Human species?
 Console.WriteLine(characters.Count(c => c.Species == "Human" && c.Series.Contains("Mario")));
 // [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
+foreach (string? n in characters.Where(c => c.Species == "Human" && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n ?? "");
 // [1.25c] How many character(s) in the Mario series are Koopa species?
 // [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
 // [1.25e] How many character(s) in the Mario series are something other than Human or Koopa species?
