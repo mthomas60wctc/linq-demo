@@ -153,11 +153,12 @@ Console.WriteLine("\x1b[3J");
 // Console.WriteLine(characters.Any(c => c.Alias.Contains("Winter Kong")));
 // // [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
 // foreach (var obj in characters.Where(c => c.Alias.Contains("Winter Kong")).Select(c => new { c.Name, c.Alias })) Console.WriteLine($"{obj.Name} AKA {String.Join(", ", obj.Alias.ToArray())}");
-// [1.24a] How many character(s) have a species of Kremling?
-Console.WriteLine(characters.Count(c => c.Species == "Kremling"));
-// [1.24b] List the character(s) that have a species of Kremling - return character name only.
-foreach (string? n in characters.Where(c => c.Species == "Kremling").Select(c => c.Name)) Console.WriteLine(n ?? "");
+// // [1.24a] How many character(s) have a species of Kremling?
+// Console.WriteLine(characters.Count(c => c.Species == "Kremling"));
+// // [1.24b] List the character(s) that have a species of Kremling - return character name only.
+// foreach (string? n in characters.Where(c => c.Species == "Kremling").Select(c => c.Name)) Console.WriteLine(n ?? "");
 // [1.25a] How many character(s) in the Mario series are Human species?
+Console.WriteLine(characters.Count(c => c.Species == "Human" && c.Series.Contains("Mario")));
 // [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
 // [1.25c] How many character(s) in the Mario series are Koopa species?
 // [1.25d] List the character(s) in the Mario series that are Koopa species - return character name only.
