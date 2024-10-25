@@ -124,28 +124,29 @@ Console.WriteLine("\x1b[3J");
 // // [1.19f] List the character(s) created in that 1981 (Donkey Kong series) - return character name only.
 // foreach (string? name in characters.Where(c => c.YearCreated == 1981 && c.Series.Contains("Donkey Kong")).Select(c => c.Name)) Console.WriteLine(name);
 // [1.20a] How many character(s) made their first appearance in Donkey Kong 64?
-Console.WriteLine(characters.Count(c => c.FirstAppearance == "Donkey Kong 64"));
-// [1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
-foreach(string n in characters.Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name)) Console.WriteLine(n);
-// [1.21a] Are there any character(s) with no alias (all series)?
-Console.WriteLine(characters.Any(c => c.Alias.Count() == 0));
-// [1.21b] How many character(s) with no alias (all series)?
-Console.WriteLine(characters.Count(c => c.Alias.Count() == 0));
-// [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
-foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Series})) Console.WriteLine($"{obj.Name} - {String.Join(", ", obj.Series.ToArray())}"); //did not include alias because list will be empty
-// [1.21d] Are there any character(s) with no alias (Mario series)?
-Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")));
-// [1.21e] How many character(s) with no alias (Mario series)?
-Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")));
-// [1.21f] List the character(s) with no alias (Mario series) - return character name and alias only.
-foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n); //did not include alias because list will be empty
-// [1.21g] Are there any character(s) with no alias (Donkey Kong series)?
-Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
-// [1.21h] How many character(s) with no alias (Donkey Kong series)?
-Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
-// [1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
-foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")).Select(c => c.Name)) Console.WriteLine(n); //did not include alias because list will be empty
+// Console.WriteLine(characters.Count(c => c.FirstAppearance == "Donkey Kong 64"));
+// // [1.20b] List the character(s) that made their first appearance in Donkey Kong 64 - return character name only.
+// foreach(string n in characters.Where(c => c.FirstAppearance == "Donkey Kong 64").Select(c => c.Name)) Console.WriteLine(n);
+// // [1.21a] Are there any character(s) with no alias (all series)?
+// Console.WriteLine(characters.Any(c => c.Alias.Count() == 0));
+// // [1.21b] How many character(s) with no alias (all series)?
+// Console.WriteLine(characters.Count(c => c.Alias.Count() == 0));
+// // [1.21c] List the character(s) with no alias (all series) - return character name, alias and series only.
+// foreach(var obj in characters.Where(c => c.Alias.Count() == 0).Select(c => new {c.Name, c.Series})) Console.WriteLine($"{obj.Name} - {String.Join(", ", obj.Series.ToArray())}"); //did not include alias because list will be empty
+// // [1.21d] Are there any character(s) with no alias (Mario series)?
+// Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")));
+// // [1.21e] How many character(s) with no alias (Mario series)?
+// Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")));
+// // [1.21f] List the character(s) with no alias (Mario series) - return character name and alias only.
+// foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Mario")).Select(c => c.Name)) Console.WriteLine(n); //did not include alias because list will be empty
+// // [1.21g] Are there any character(s) with no alias (Donkey Kong series)?
+// Console.WriteLine(characters.Any(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
+// // [1.21h] How many character(s) with no alias (Donkey Kong series)?
+// Console.WriteLine(characters.Count(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")));
+// // [1.21i] List the character(s) with no alias (Donkey Kong series) - return character name and alias only.
+// foreach(string n in characters.Where(c => c.Alias.Count() == 0 && c.Series.Contains("Donkey Kong")).Select(c => c.Name)) Console.WriteLine(n); //did not include alias because list will be empty
 // [1.22a] Do any character(s) have an alias of Snowmad King (return type must be boolean)?
+Console.WriteLine(characters.Any(c => c.Alias.Contains("Snowmad King")));
 // [1.22b] List the character(s) that have an alias of Snowmad King - return character name and alias only.
 // [1.23a] Do any character(s) that have an alias of Winter Kong (return type must be boolean)?
 // [1.23b] List the character(s) that have an alias of Winter Kong - return character name and alias only.
