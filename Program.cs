@@ -170,3 +170,4 @@ Console.WriteLine(characters.Count(c => !(c.Species == "Koopa" || c.Species == "
 // [1.25f] List the character(s) in the Mario series that are something other than Human or Koopa species - return character name and species only.
 foreach (var obj in characters.Where(c => !(c.Species == "Koopa" || c.Species == "Human") && c.Series.Contains("Mario")).Select(c => new {c.Name, c.Species})) Console.WriteLine($"{obj.Name} - {obj.Species}");
 // [1.26] List the character(s) in the Donkey Kong series that are something other than Human or Kong species - return character name and species only?
+foreach (var obj in characters.Where(c => !(c.Species == "Kong" || c.Species == "Human") && c.Series.Contains("Donkey Kong")).Select(c => new {c.Name, c.Species})) Console.WriteLine($"{obj.Name} - {obj.Species}");
