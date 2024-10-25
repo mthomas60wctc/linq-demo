@@ -156,6 +156,7 @@ Console.WriteLine("\x1b[3J");
 // [1.24a] How many character(s) have a species of Kremling?
 Console.WriteLine(characters.Count(c => c.Species == "Kremling"));
 // [1.24b] List the character(s) that have a species of Kremling - return character name only.
+foreach (string? n in characters.Where(c => c.Species == "Kremling").Select(c => c.Name)) Console.WriteLine(n ?? "");
 // [1.25a] How many character(s) in the Mario series are Human species?
 // [1.25b] List the character(s) in the Mario series that are Human species - return character name only.
 // [1.25c] How many character(s) in the Mario series are Koopa species?
